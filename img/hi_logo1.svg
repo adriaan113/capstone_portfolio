@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="170px" height="126px" viewBox="0 0 170 126" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>hi</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile" transform="translate(-71.000000, -19.000000)">
+            <g id="header">
+                <g id="hi" transform="translate(73.000000, 21.000000)">
+                    <text id="HI" font-family="ArialRoundedMTBold, Arial Rounded MT Bold" font-size="80" font-weight="normal" fill="#000000">
+                        <tspan x="44.0898438" y="101">HI</tspan>
+                    </text>
+                    <g id="halo" stroke="#000000" stroke-linecap="round" stroke-width="3">
+                        <path d="M90.1171875,21.7851562 C93.3096233,9.10376456 92.3488928,16.2635825 91.7109375,0.171875" id="Path"></path>
+                        <path d="M71.625,23.2460937 C60.3843321,9.06365331 63.7535074,15.6372224 59.25,4.86328125" id="Path-2"></path>
+                        <path d="M38.8632812,24.625 C25.6400201,13.4329548 31.9664989,17.0636872 21.0117188,11.96875" id="Path-3"></path>
+                        <path d="M25.8398438,46.25 C18.6614583,45.0286458 11.4830729,43.8072917 4.3046875,42.5859375" id="Path-4"></path>
+                        <path d="M21.3789062,71.2539062 C14.3411458,72.4570312 7.30338542,73.6601562 0.265625,74.8632812" id="Path-5"></path>
+                        <path d="M19.4179688,101.84375 C5.01715969,107.557185 10.1145754,104.113659 2.796875,109.863281" id="Path-6"></path>
+                        <path d="M118.597656,24.7539062 C128.713435,14.7194607 124.971033,20.4134846 130.167969,7.90234375" id="Path-7"></path>
+                        <path d="M139.480469,35.84375 C145.951823,32.6289063 152.423177,29.4140625 158.894531,26.1992187" id="Path-8"></path>
+                        <path d="M142.648438,59.515625 C157.649022,54.5882808 150.312365,55.8643731 164.546875,55.09375" id="Path-9"></path>
+                        <path d="M145.355469,80.9765625 C158.568057,82.7989885 151.427129,80.9199587 166.359375,88.015625" id="Path-10"></path>
+                        <path d="M147.066406,105.519531 C149.248145,114.338241 147.156916,108.009316 158.703125,121.78125" id="Path-11"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
