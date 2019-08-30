@@ -82,6 +82,7 @@ header nav ul li:first-child {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-template-rows: auto;
+  grid-gap: 20px;
 }
 .grid .grid-item {
   display: flex;
@@ -105,8 +106,6 @@ header nav ul li:first-child {
   opacity: 0.5;
 }
 .grid .grid-item .thumbnail svg path {
-  stroke-dasharray: 903;
-  stroke-dashoffset: 903;
   animation: border 0.7s linear forwards;
 }
 @keyframes border {

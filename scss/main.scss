@@ -135,6 +135,7 @@ header{
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
   grid-template-rows: auto;
+  grid-gap: 20px;
   .grid-item{
     display: flex;
     flex-direction: column;
@@ -148,6 +149,7 @@ header{
       }
       //*** BORDERS ***//
       svg{
+        // display: none;
         position: absolute;
         top: 0;
         left: 0;
@@ -156,8 +158,8 @@ header{
         opacity: .5;
 
          path {
-          stroke-dasharray: 903;
-          stroke-dashoffset: 903;
+          // stroke-dasharray: 903;
+          // stroke-dashoffset: 903;
           animation: border .7s linear forwards;
         }
 
@@ -170,6 +172,8 @@ header{
     }
   }
 }
+
+
 
 
 
