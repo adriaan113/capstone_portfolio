@@ -1,9 +1,41 @@
 * {
   box-sizing: border-box;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
 }
 
 header {
   background-color: #FF8585;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header .logo {
+  padding: 1em 0 0.4em;
+}
+header .logo svg {
+  display: block;
+  margin: 0 auto;
+}
+header nav ul {
+  display: flex;
+  padding: 0;
+  margin-bottom: 0.8em;
+}
+header nav ul li {
+  list-style: none;
+  color: white;
+  padding: 0 0.5em;
+}
+header nav ul li:first-child {
+  border-right: 2px solid white;
 }
 
 .path {
@@ -37,55 +69,50 @@ header {
   left: 0px;
 }
 
-.project-item::after {
+.intro-text {
+  background-color: white;
+  padding: 0.5em;
+}
+.intro-text h3 {
+  text-align: center;
+  font-weight: lighter;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: auto;
+}
+.grid .grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.grid .grid-item .thumbnail {
+  position: relative;
+}
+.grid .grid-item .thumbnail img {
+  width: 100%;
+  height: auto;
+}
+.grid .grid-item .thumbnail svg {
   position: absolute;
-  opacity: 0.7;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
 }
-
-.item1::after {
-  content: url(../img/bordertest.svg);
-  top: 0px;
-  left: -7px;
+.grid .grid-item .thumbnail svg path {
+  stroke-dasharray: 903;
+  stroke-dashoffset: 903;
+  animation: border 0.7s linear forwards;
 }
-
-.item8::after, .item2::after {
-  content: url(../img/bordertest2.svg);
-  top: -10px;
-  left: -5px;
-}
-
-.item3::after {
-  content: url(../img/bordertest3.svg);
-  top: 0px;
-  left: -5px;
-}
-
-.item9::after, .item4::after {
-  content: url(../img/path19.svg);
-  top: 3px;
-  left: 3px;
-}
-
-.item5::after {
-  content: url(../img/path20.svg);
-  top: 3px;
-  left: -9px;
-}
-
-.item6::after {
-  content: url(../img/path21.svg);
-  top: -8px;
-  left: -8px;
-}
-
-.item7::after {
-  content: url(../img/path22.svg);
-  top: 0px;
-  left: 0px;
-}
-
-.item1:hover img {
-  opacity: 0.3;
+@keyframes border {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

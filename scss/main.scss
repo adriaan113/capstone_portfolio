@@ -17,8 +17,17 @@ $mainBgColor: #FF8585;
 
 *{
   box-sizing: border-box;
+  margin-block-start: 0;
+  margin-block-end: 0; // what is this all of a sudden?
 }
 
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+
+}
 
 //***************************************************//
 //***************************************************//
@@ -28,8 +37,41 @@ $mainBgColor: #FF8585;
 
 header{
   background-color: $mainBgColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .logo{
+    padding: 1em 0 .4em;
+    svg{
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  nav{
+    ul{
+      display: flex;
+      padding: 0;
+      margin-bottom: .8em;
+      li{
+        list-style: none;
+        color: white;
+        padding: 0 .5em;
+      }
+      li:first-child{
+        border-right: 2px solid white;
+      }
+    }
+  }
 }
 
+// animate logo to the left and nav next to it if the animationis done
+
+
+
+
+
+//***ANIMATE LOGO***//
 .path {
   stroke-dasharray: 4924;
   stroke-dashoffset: 4924;
@@ -42,9 +84,7 @@ header{
   }
 }
 
-
-
-//******** UNDERLINE ********//
+//*** UNDERLINE ***//
 .underline{
   position: relative;
 }
@@ -68,54 +108,73 @@ header{
 
 
 
-//******** BORDERS ********//
 
-.project-item::after{
-  position: absolute;
-  opacity: 0.7;
+
+//***************************************************//
+//***************************************************//
+//*****************       ASIDE     ***************//
+//***************************************************//
+//***************************************************//
+.intro-text{
+  background-color: white;
+  padding: .5em;
+    h3{
+      text-align: center;
+      font-weight: lighter;
+    }
 }
 
-.item1::after{
-  content: url(../img/bordertest.svg);
-  top: 0px;
-  left: -7px;
+
+//***************************************************//
+//***************************************************//
+//*****************       GRID      ***************//
+//***************************************************//
+//***************************************************//
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
+  grid-template-rows: auto;
+  .grid-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .thumbnail{
+      position: relative;
+      img{
+        width: 100%;
+        height: auto;
+      }
+      //*** BORDERS ***//
+      svg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        opacity: .5;
+
+         path {
+          stroke-dasharray: 903;
+          stroke-dashoffset: 903;
+          animation: border .7s linear forwards;
+        }
+
+        @keyframes border {
+          to {
+             stroke-dashoffset: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
-.item8::after, .item2::after{
-  content: url(../img/bordertest2.svg);
-  top: -10px;
-  left: -5px;
-}
 
-.item3::after{
-  content: url(../img/bordertest3.svg);
-  top: 0px;
-  left: -5px;
-}
 
-.item9::after, .item4::after{
-  content: url(../img/path19.svg);
-  top: 3px;
-  left: 3px;
-}
 
-.item5::after{
-  content: url(../img/path20.svg);
-  top: 3px;
-  left: -9px;
-}
 
-.item6::after{
-  content: url(../img/path21.svg);
-  top: -8px;
-  left: -8px;
-}
-
-.item7::after{
-  content: url(../img/path22.svg);
-  top: 0px;
-  left: 0px;
-}
 
 
 //***************************************************//
@@ -131,11 +190,6 @@ header{
 //***************************************************//
 //***************************************************//
 
-.item1:hover{
-   img{
-     opacity: 0.3;
-   }
-}
 
 
 
