@@ -1,0 +1,7 @@
+options:
+  cors: true
+actions:
+  test: ./actions/test.js
+tests:
+  test:
+    action: test
