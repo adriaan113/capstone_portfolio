@@ -7,6 +7,7 @@
   <title>ADRIAAN VAN DER PLOEG</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -55,10 +56,15 @@
           </svg>
           <img src="img/thumbnails/sass.png">
         </div>
+        <div class="btn-container">
+          <a class="lb-btn" data-fancybox="sass" data-type="iframe" href="projects/style_guide_v6/index.html">
+            view website
+          </a>
+          <a class="lb-btn" href="https://github.com/adriaan113/style_guide_v6.git" target="_blank">view source</a>
+        </div>
       </div>
 
       <div class="grid-item">
-
         <h1>satan</h1>
         <div class="thumbnail">
           <?xml version="1.0" encoding="UTF-8"?>
@@ -75,8 +81,15 @@
           </svg>
           <img src="img/thumbnails/gallery.png">
         </div>
-
+        <div class="btn-container">
+          <a class="lb-btn" data-fancybox="gallery" data-type="iframe" href="projects/photo_gallery_v4/index.html">
+            view website
+          </a>
+          <a class="lb-btn" href="https://github.com/adriaan113/photo_gallery_v4.git" target="_blank">view source</a>
+        </div>
       </div>
+
+
 
       <div class="grid-item">
         <h1>satan</h1>
@@ -93,9 +106,14 @@
                   </g>
               </g>
           </svg>
-          <img src="img/thumbnails/gameshow.png">
+            <img src="img/thumbnails/gameshow.png">
         </div>
-
+        <div class="btn-container">
+          <a class="lb-btn" data-fancybox="gameshow" data-type="iframe" href="projects/game_show_app_v1.2/index.html">
+            view website
+          </a>
+          <a class="lb-btn" href="https://github.com/adriaan113/game_show_app_v1.2.git" target="_blank">view source</a>
+        </div>
       </div>
 
       <div class="grid-item">
@@ -114,6 +132,12 @@
           </svg>
           <img src="img/thumbnails/dashboard.png">
         </div>
+        <div class="btn-container">
+          <a class="lb-btn" data-fancybox="dashboard" data-type="iframe" href="projects/web_app_dashboard_v3.1/index.html">
+            view website
+          </a>
+          <a class="lb-btn" href="https://github.com/adriaan113/web_app_dashboard_v3.1.git" target="_blank">view source</a>
+        </div>
       </div>
 
       <div class="grid-item">
@@ -129,9 +153,13 @@
                   </g>
               </g>
           </svg>
-
-
           <img src="img/thumbnails/api.png">
+        </div>
+        <div class="btn-container">
+          <a class="lb-btn" data-fancybox="api" data-type="iframe" href="projects/employee_directory_v1/index.html">
+            view website
+          </a>
+          <a class="lb-btn" href="https://github.com/adriaan113/employee_directory_v1.git" target="_blank">view source</a>
         </div>
       </div>
 
@@ -150,20 +178,33 @@
                   </g>
               </g>
           </svg>
-
-
           <img src="img/thumbnails/form.png">
+        </div>
+        <div class="btn-container">
+          <a class="lb-btn" data-fancybox="form" data-type="iframe" href="projects/online_registration_v4/index.html">
+            view website
+          </a>
+          <a class="lb-btn" href="https://github.com/adriaan113/online_registration_v4.git" target="_blank">view source</a>
         </div>
       </div>
 
-    </section>
+    </section> <!--/.portfolio-container -->
 
     <section class="contact-container">
-    <div>
+    <div class="contact-text">
       <h1>contact</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, iusto.</p>
     </div>
-    </section>
+    <form action="#" method="post" id="email_form">
+      <label for="name">what's your name?</label>
+      <input type="text" id="name" name="user_name" required>
+      <label for="email">what's your email?</label>
+      <input type="email" id="email" name="user_email" required>
+      <label for="other_topics">Drop me a line</label>
+      <textarea id="other_topics" name="topics"></textarea>
+      <button>hiermoet nog een button</button>
+    </form>
+    </section> <!--/.contact-container -->
 
   </main><!-- /main -->
 
@@ -174,9 +215,12 @@
       <img src="img/thumbnails/linkedin.svg" alt="">
       <img src="img/thumbnails/github.svg" alt="">
       <img src="img/thumbnails/insta.svg" alt="">
-
     </div>
   </footer><!-- /footer -->
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
   <script src="js/logo.js"></script>
   <script src="js/main.js"></script>
