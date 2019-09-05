@@ -10,6 +10,11 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+h2 {
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
 header {
   background-color: #FF8585;
   display: flex;
@@ -31,8 +36,14 @@ header nav ul {
 }
 header nav ul li {
   list-style: none;
-  color: white;
   padding: 0 0.5em;
+}
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  background-image: linear-gradient(to right, #5736E6, #5736E6 50%, #FF8585 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
 }
 header nav ul li:first-child {
   border-right: 2px solid white;
@@ -51,9 +62,11 @@ header nav ul li:first-child {
 }
 .intro-text {
   background-color: white;
-  padding: 0.5em;
+  padding: 1em;
+  margin-bottom: 1em;
 }
 .intro-text h3 {
+  font-size: 1.1em;
   text-align: center;
   font-weight: lighter;
 }
@@ -119,17 +132,21 @@ header nav ul li:first-child {
 .portfolio-container .grid-item .btn-container {
   position: absolute;
   display: none;
-  justify-content: center;
+  top: 55%;
 }
 .portfolio-container .grid-item .btn-container .lb-btn {
   display: inline-block;
-  background-color: #FF8585;
+  background-color: #5736E6;
   color: white;
   margin: 0 10px;
   padding: 7px;
   text-decoration: none;
+  z-index: 2;
 }
 
+.contact-container {
+  position: relative;
+}
 .contact-container .contact-text {
   border-top: 3px solid #FF8585;
   margin: 40px 20px 30px;
@@ -144,7 +161,10 @@ header nav ul li:first-child {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+.contact-container form input, .contact-container form textarea {
+  padding-left: 10px;
 }
 .contact-container form input, .contact-container form textarea {
   margin: 5px 20px 10px;
@@ -155,10 +175,34 @@ header nav ul li:first-child {
 }
 .contact-container form textarea {
   height: 5em;
+  padding-top: 10px;
 }
 .contact-container form label {
   text-align: center;
   padding: 5px 0;
+}
+
+.form-btn {
+  display: block;
+  width: calc(100% - 40px);
+  height: 2.3em;
+  background-color: #5736E6;
+  color: white;
+  padding: 0;
+  margin: 5px auto 40px;
+  border-style: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.text-bubble {
+  position: absolute;
+  top: 300px;
+  left: 20px;
+  width: 90%;
+}
+.text-bubble tspan:last-child a {
+  text-decoration: underline;
 }
 
 footer {
@@ -176,6 +220,31 @@ footer {
 
 input:focus,
 textarea:focus {
+  outline: none;
+}
+
+form button:hover {
+  background-color: #2f14a2;
+}
+
+form button:active {
+  outline: none;
+}
+
+.lb-btn:hover {
+  box-shadow: 3px 6px #2f14a2;
+}
+
+nav ul li a:hover {
+  transition: all 0.3s cubic-bezier(0, 0, 0.23, 1);
+  background-position: 0%;
+}
+
+.form-btn:focus {
+  outline: 0;
+}
+
+.form-btn:active {
   outline: none;
 }
 

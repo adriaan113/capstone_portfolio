@@ -6,6 +6,8 @@
 
 
 $mainBgColor: #FF8585;
+$primaryColor: #5736E6;
+$secondaryColor: #7289AA;
 
 
 
@@ -26,6 +28,11 @@ body{
   margin: 0;
   padding: 0;
   font-family: 'Lato', sans-serif;
+}
+
+h2{
+  padding: 10px;
+  margin-bottom: 5px;
 }
 
 
@@ -56,8 +63,20 @@ header{
       margin-bottom: .8em;
       li{
         list-style: none;
-        color: white;
         padding: 0 .5em;
+        a{
+          color: white;
+          text-decoration: none;
+          // -webkit-background-clip: text;
+          // -webkit-text-fill-color: transparent;
+          background-image: linear-gradient(
+          to right,
+          $primaryColor,
+          $primaryColor 50%,
+          $mainBgColor 50%);
+          background-size: 200% 100%;
+          background-position: 100%;
+       }
       }
       li:first-child{
         border-right: 2px solid white;
@@ -91,8 +110,10 @@ header{
 //***************************************************//
 .intro-text{
   background-color: white;
-  padding: .5em;
+  padding: 1em;
+  margin-bottom: 1em;
     h3{
+      font-size: 1.1em;
       text-align: center;
       font-weight: lighter;
     }
@@ -171,17 +192,18 @@ header{
     .btn-container{
       position: absolute;
       display: none;
-      justify-content: center;
-      // top: 50%;
-      // left: 10%;
+      top: 55%;
+      // justify-content: center;
+      // align-items: center;
       .lb-btn{
         display: inline-block;
-        background-color: $mainBgColor;
+        background-color: $primaryColor;
         // font-size: .8em;
         color: white;
         margin: 0 10px;
         padding: 7px;
         text-decoration: none;
+        z-index: 2;
       }
     }
   }
@@ -196,6 +218,7 @@ header{
 
 .contact-container{
   //width: 100%;// is this necessary???
+  position: relative;
 
   .contact-text{
     border-top: 3px solid $mainBgColor;
@@ -211,7 +234,10 @@ header{
     display: flex;
     flex-direction: column;
     align-items:stretch;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    input,textarea{
+      padding-left: 10px;
+    }
     input, textarea{
       margin: 5px 20px 10px;
       height: 2.3em;
@@ -221,6 +247,7 @@ header{
     }
     textarea{
       height: 5em;
+      padding-top: 10px;
     }
     label{
       text-align: center;
@@ -229,6 +256,31 @@ header{
   }
 }
 
+.form-btn{
+  //position: relative;
+  display: block;
+  width: calc(100% - 40px);
+  height: 2.3em;
+  background-color: $primaryColor;
+  color: white;
+  padding: 0;
+  margin: 5px auto 40px;
+  border-style: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.text-bubble{
+  position: absolute;
+  top: 300px;
+  left: 20px;
+  width: 90%;
+  tspan:last-child{
+    a{
+      text-decoration: underline;
+    }
+  }
+}
 
 
 
@@ -250,6 +302,7 @@ footer{
   padding: 10px;
   img{
     padding: 10px;
+
   }
 }
 
@@ -272,6 +325,33 @@ footer{
 
 input:focus,
 textarea:focus{
+  outline: none;
+}
+
+form button:hover{
+  background-color: darken($primaryColor, 20%);
+}
+
+form button:active{
+  outline: none;
+}
+
+
+.lb-btn:hover{
+  //transform: skewX(10deg);
+  box-shadow: 3px 6px darken($primaryColor, 20%);
+}
+
+nav ul li a:hover{
+  transition: all 0.3s cubic-bezier(0.000, 0.000, 0.230, 1);
+  background-position: 0%;
+}
+
+.form-btn:focus{
+  outline: 0;
+}
+
+.form-btn:active{
   outline: none;
 }
 
