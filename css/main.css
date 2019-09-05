@@ -4,6 +4,10 @@
   margin-block-end: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -16,6 +20,8 @@ h2 {
 }
 
 header {
+  width: 100%;
+  height: auto;
   background-color: #FF8585;
   display: flex;
   flex-direction: column;
@@ -23,7 +29,7 @@ header {
   justify-content: center;
 }
 header .logo {
-  padding: 1em 0 0.4em;
+  padding: 0.8em 0 0.4em;
 }
 header .logo svg {
   display: block;
@@ -47,6 +53,24 @@ header nav ul li a {
 }
 header nav ul li:first-child {
   border-right: 2px solid white;
+}
+
+.header-shrink {
+  position: fixed;
+  z-index: 1000;
+  height: 60px;
+  padding: 1em 0;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.header-shrink .logo svg {
+  width: 72px;
+  height: 69px;
+  margin-left: 0.8em;
+  padding: 0.7em;
+}
+.header-shrink nav {
+  margin: 0.5em 0.8em 0 0;
 }
 
 .path {

@@ -1,3 +1,5 @@
+
+//BORDER ANIMATED SVG EFFECT
 const thumbnail=document.querySelectorAll('.thumbnail');
 const border= document.querySelectorAll('.thumbnail svg');
 const borderPath = document.querySelectorAll('.thumbnail svg path');
@@ -33,7 +35,7 @@ for(let i=0;i<gridItem.length;i++){
 
 
 
-
+//FORM SEND BUTTON 'FUNCTIONALITY'
 const sendBtn= document.querySelector('.form-btn');
 const contactContainer= document.querySelector('.contact-container');
 //const btnMessage= document.querySelector('.btn-message');
@@ -66,12 +68,27 @@ sendBtn.addEventListener('click',()=>{
   sendBtn.appendChild(btnMessage);
   contactContainer.insertBefore(btnMessage, contactContainer.childNodes[4]);
 
+
+//jquery fade effect
+
   // $(".btn-message").click(function(){
   //   $(".btn-message").fadeOut();
   // });
 
 $('.btn-message').delay(8000).fadeOut(400);
 
+});
 
 
+//STICKY HEADER
+
+$(window).scroll(function() {
+if ($(this).scrollTop() > 40){
+    $('header').addClass("header-shrink");
+    //$('.portfolio-container').css('paddingTop', '60px');
+  }
+  else{
+    $('header').removeClass("header-shrink");
+    //$('.portfolio-container').css('paddingTop', '0');
+  }
 });
