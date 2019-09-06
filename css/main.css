@@ -251,10 +251,6 @@ header nav ul li:first-child {
   background-color: #FF8585;
   padding: 6px;
 }
-.social-container img {
-  padding: 10px;
-}
-
 input:focus,
 textarea:focus {
   outline: none;
@@ -283,6 +279,10 @@ nav ul li a:hover {
 
 .form-btn:active {
   outline: none;
+}
+
+.social-icon:hover {
+  fill: #5736E6;
 }
 
 @media (min-width: 600px) {
@@ -352,8 +352,9 @@ nav ul li a:hover {
   .social-container {
     justify-content: center;
   }
-  .social-container img {
-    padding: 10px 20px;
+  .social-container .social-icon {
+    padding: 0;
+    margin: 0 1em;
   }
 }
 @media (min-width: 801px) {
