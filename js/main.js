@@ -38,7 +38,7 @@ for(let i=0;i<gridItem.length;i++){
 //FORM SEND BUTTON 'FUNCTIONALITY'
 const sendBtn= document.querySelector('.form-btn');
 const contactContainer= document.querySelector('.contact-container');
-//const btnMessage= document.querySelector('.btn-message');
+const btnFormContainer= document.querySelector('.btn-form-container');
 
 
 sendBtn.addEventListener('click',()=>{
@@ -65,8 +65,8 @@ sendBtn.addEventListener('click',()=>{
       </g>
   </svg>`
 
-  sendBtn.appendChild(btnMessage);
-  contactContainer.insertBefore(btnMessage, contactContainer.childNodes[4]);
+  btnFormContainer.appendChild(btnMessage);
+  btnFormContainer.insertBefore(btnMessage, btnFormContainer.childNodes[0]);
 
 
 //jquery fade effect
@@ -84,11 +84,13 @@ $('.btn-message').delay(8000).fadeOut(400);
 
 $(window).scroll(function() {
 if ($(this).scrollTop() > 40){
-    $('header').addClass("header-shrink");
+    $('.header-container').addClass("header-shrink");
+    $('header').css({'position' : 'fixed', 'height' : '60px'});
     //$('.portfolio-container').css('paddingTop', '60px');
   }
   else{
-    $('header').removeClass("header-shrink");
+    $('.header-container').removeClass("header-shrink");
+    $('header').css({'position' : 'static', 'height' : 'auto'});
     //$('.portfolio-container').css('paddingTop', '0');
   }
 });
