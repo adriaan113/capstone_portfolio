@@ -94,3 +94,16 @@ if ($(this).scrollTop() > 40){
     //$('.portfolio-container').css('paddingTop', '0');
   }
 });
+
+//LOGO HOVER
+const path= document.querySelector('.path');
+const logoLetter= document.querySelector('.logo text');
+const logo= document.querySelector('.logo');
+
+logo.addEventListener('mouseover',()=>{
+  path.style.stroke = '#5736E6';
+});
+
+logo.addEventListener('mouseout',()=>{
+  path.style.stroke = '#fff';
+});

@@ -40,7 +40,7 @@
   </header><!-- /header -->
 
   <aside class="intro-text">
-    <h3>My name is <span class="underline underline1">Adriaan van der Ploeg</span>. I'm a photographer by day and an aspiring <span class="underline underline2">front-end developer</span> by night. On this website you'll find my very first steps into this new and intriguing journey.</h3>
+    <h3>My name is <span class="underline underline1">Adriaan van der Ploeg</span>. I'm a photographer by day and an aspiring <span class="underline underline2">front-end developer</span> by night. On this website you'll find my very first steps into this new and intriguing world.</h3>
   </aside>
 
   <main>
@@ -63,7 +63,8 @@
           <img src="img/thumbnails/sass.png">
         </div>
         <div class="btn-container">
-          <a class="lb-btn" data-fancybox="sass" data-type="iframe" href="projects/style_guide_v6/index.html">
+          <a class="lb-btn" data-fancybox="sass" data-type="iframe" href="projects/style_guide_v6/index.html" 
+          data-caption="My first brush with Sass. What a wonderful and, at the beginning, confusing experience. I learned all about variables, @mixins and i can now @include everything you ever dreamed of.">
             view website
           </a>
           <a class="lb-btn" href="https://github.com/adriaan113/style_guide_v6.git" target="_blank">view source</a>
@@ -199,7 +200,7 @@
     <section class="contact-container" id="contact">
     <div class="contact-text">
       <h1>contact</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, iusto.</p>
+      <p>Get in touch by filling out this form. Maybe we could work together.</p>
     </div>
     <form action="#" method="post" id="email_form">
       <label for="name">what's your name?</label>
@@ -240,7 +241,16 @@
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-
+  <script>
+    $('[data-fancybox]').fancybox({
+      // infobar: true,
+      // toolbar  : false,
+      // smallBtn : true,
+      iframe : {
+      preload : false
+      }
+    })
+  </script>
   <script src="js/logo.js"></script>
   <script src="js/main.js"></script>
 </body>
