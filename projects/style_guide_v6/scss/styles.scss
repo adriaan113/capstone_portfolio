@@ -1,0 +1,17 @@
+// **************************************
+// index.scss
+// Main Sass file used to import partials
+// **************************************
+
+
+// NOTE: import utilities and base partials here:
+
+@import 'utilities/index';
+@import 'base/index';
+
+
+// import components partials
+@import 'components/index';
+
+
+//@import 'components'; dit klopt toch niet? waarom staat hier geen index file?

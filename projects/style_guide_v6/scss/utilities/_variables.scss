@@ -1,0 +1,66 @@
+
+//////// COLOR ///////////
+
+
+///descriptive color variables
+
+$main-green: #90E0C1;
+$main-grey : #BDBDBD;
+$main-white: #fff;
+
+$default-color: #8BDCFB;
+$succes-color : #8BCB85;
+$error-color  : #CB7479;
+$warning-color: #E17758;
+$info-color   : #8B7ABD;
+
+
+//functional color variables
+
+$nav-btn      : $main-green;
+$submit-btn   : $default-color;
+$border-main  : $main-green;
+$border-image : $main-grey;
+
+$link         : $default-color;
+$text         : $main-grey;
+$submit       : $main-white;
+
+
+$button-colors: 'default','success','error','warning','info';
+
+
+
+//grid color variables
+
+$gcol-12: rgba($main-green, 0.8);
+$gcol-4 : rgba($default-color,0.8);
+$gcol-6 : darken($gcol-4,40%);
+$gcol-3:  rgba($info-color, 0.8);
+$gcol-5:  rgba($succes-color,0.8);
+$gcol-7:  rgba($error-color, 0.8);
+$gcol-8:  rgba($warning-color,0.8);
+$center-gcol-7: rgba($error-color,0.8);
+
+
+
+//////// BORDERS ////////////////
+
+//border-radius
+
+$br: 5px;
+
+
+//////// FONTS ///////////
+
+$font-url--google: 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,800&display=swap';
+$font-family: 'Open Sans', sans-serif;
+
+@if variable-exists(font-url--google){
+  @import url($font-url--google);
+}
+
+
+//////// BREAKPOINTS ///////////
+
+$break1: 768px;

@@ -1,0 +1,23 @@
+
+.img{
+
+  &--logo{
+    @extend %img;
+    width: 130px;
+
+  }
+  &--frame{
+    @extend %img;
+    width: 90%;
+    min-width: 390px;
+    max-width: 450px;
+    outline: 2px solid $main-grey;
+    outline-offset: 10px;
+    @include mq($margin: 15px auto);
+  }
+  &--avatar{
+    @extend %img;
+    margin: 40px auto;
+    @include mq($margin: 10px auto);
+  }
+}

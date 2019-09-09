@@ -1,0 +1,50 @@
+
+///buttons background-color
+
+@mixin btn($bgc) {
+  @extend %#{$bgc}-btn;
+}
+
+
+///font-sizes in em
+
+@mixin f-size($fz){
+  font-size: #{$fz}em;
+}
+
+///background-color
+@mixin bgc($bgc){
+  background-color: $bgc;
+}
+
+///colors
+@mixin c($c){
+  color: $c;
+}
+
+
+
+
+
+
+
+/////////////////////////////////////
+//          media query           //
+////////////////////////////////////
+
+@mixin mq($min-w: $break1, $margin: 0){
+  @media (min-width:$min-w){
+    margin: $margin;
+    @content;
+  };
+}
+
+/////////////////////////////////////
+//         flex-box               //
+////////////////////////////////////
+
+@mixin flex($fd: row, $justify: space-between){
+  display: flex;
+  flex-direction: $fd;
+  justify-content: $justify;
+}

@@ -1,0 +1,24 @@
+.nav{
+  @include mq($margin:0 50px 0 150px){
+  max-width: 448px;
+  @include flex($justify:space-between);
+ }
+
+}
+
+
+.nav__item{
+  @extend %nav__item;
+  &:hover{
+    @include bgc($main-green);
+  }
+  a{
+    display: block;
+    padding: 10px 0;
+    margin: 0 10px;
+    @include c ($main-grey);
+    &:hover{
+      @include c($main-white);
+    }
+  }
+}

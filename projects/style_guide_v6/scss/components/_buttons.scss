@@ -1,0 +1,17 @@
+
+ @each $color in $button-colors{
+
+  .btn--#{$color}{
+    @extend %btn;
+    @include btn ($color);
+    @include mq($margin:20px 5% 0 0){
+      @include flex($justify: center);
+      //max-width: 150px;
+    }
+   }
+  }
+
+
+.btn--info{
+  margin-right: 0;
+}

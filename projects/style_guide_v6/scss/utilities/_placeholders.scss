@@ -1,0 +1,47 @@
+%nav__item{
+  background-color: $main-white;
+  border-radius: $br;
+  margin: 10px 0;
+  text-align: center;
+}
+
+%link{
+  color: $default-color;
+}
+
+
+%img{
+  display: block;
+  margin: 0 auto;
+}
+
+%btn{
+  text-transform: uppercase;
+  font-size: 0.7em;
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  margin-top: 20px;
+  margin-right: 10px;
+  border-radius: $br;
+  border-style: none;
+  color: $main-white;
+}
+
+//button background colors
+
+%default-btn{
+  background-color: $default-color;
+}
+%success-btn{
+  background-color: $succes-color;
+}
+%error-btn{
+  background-color: $error-color;
+}
+%warning-btn{
+  background-color: $warning-color;
+}
+%info-btn{
+  background-color: $info-color;
+}
