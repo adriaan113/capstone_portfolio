@@ -83,7 +83,7 @@ $('.btn-message').delay(8000).fadeOut(400);
 //STICKY HEADER
 
 $(window).scroll(function() {
-if ($(this).scrollTop() > 40){
+if ($(this).scrollTop() >= 174.84 ){
     $('.header-container').addClass("header-shrink");
     $('header').css({'position' : 'fixed', 'height' : '60px'});
     //$('.portfolio-container').css('paddingTop', '60px');
