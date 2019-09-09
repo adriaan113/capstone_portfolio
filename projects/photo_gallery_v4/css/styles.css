@@ -1,0 +1,72 @@
+
+/* BASE STYLES */
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  width: 100%;
+  font-family:'Open Sans', sans-serif;
+  font-size: 1em;
+}
+
+.main-wrapper{
+  display: flex;
+  width: 90%;
+  max-width: 1104px;
+  margin: 0 auto;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+fieldset{
+  border: none;
+}
+
+.input{
+  display: block;
+  width: 400px;
+  height: 40px;
+  margin: 30px auto;
+  padding: 0 10px;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-rows: repeat(3,1fr);
+  justify-content: center;
+  grid-gap: 80px;
+  list-style: none;
+  padding: 0;
+}
+
+li{
+  justify-self: center;
+}
+
+
+/* LIGHTBOX CUSTOM STYLING */
+
+.lightbox .lb-image{
+  border-radius: 0;
+  border: none;
+}
+
+.lb-dataContainer{
+  margin: 50px auto;
+}
+
+.lb-data .lb-details{
+  width: 100%;
+  text-align: center;
+}
+
+.lb-data .lb-close{
+  display: none;
+}
