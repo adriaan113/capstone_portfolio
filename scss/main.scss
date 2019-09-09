@@ -118,7 +118,7 @@ header{
   height: 60px;
   padding: 1em 0;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   .logo{
     svg{
       width: 72px;
@@ -364,6 +364,7 @@ header{
 
 .fancybox-slide{
   top: 20vh;
+  //height: 90%;
 }
 
 .fancybox-caption__body{
@@ -393,10 +394,21 @@ header{
 .fancybox-slide--iframe .fancybox-content {
     max-width  : 1024px;
     max-height : 768px;
+    height: 80%;
+    margin: 0;
+    top: -10%;
+
+
     // max-width  : 90%;
     // max-height : 90%;
-    margin: 0;
 }
+
+
+// .fancybox-button--close{
+//   svg{
+//
+//   }
+// }
 
 
 
