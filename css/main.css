@@ -281,6 +281,9 @@ header nav ul li:first-child {
   margin: 0;
   top: -10%;
 }
+.fancybox-slide--iframe .fancybox-content html {
+  transform: scale(-0.2);
+}
 
 input:focus,
 textarea:focus {
