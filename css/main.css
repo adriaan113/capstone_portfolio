@@ -114,6 +114,10 @@ header nav ul li:first-child {
   position: relative;
 }
 
+.underline1 .underline2 {
+  display: inline-block;
+}
+
 .underline1::after {
   position: absolute;
   content: url(../img/underline1.svg);
