@@ -281,6 +281,14 @@ header nav ul li:first-child {
   margin: 0;
   top: -10%;
 }
+.fancybox-slide--iframe .fancybox-content iframe {
+  width: 200% !important;
+  height: 200% !important;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
 
 input:focus,
 textarea:focus {
@@ -394,11 +402,25 @@ nav ul li a:hover {
     padding: 2em 2.5em;
     margin: 0 auto;
   }
+
+  .fancybox-slide--iframe .fancybox-content iframe {
+    width: 143% !important;
+    height: 143% !important;
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
 }
 @media (min-width: 801px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
   .fancybox-caption__body {
     top: -82vh;
+  }
+
+  .fancybox-slide--iframe .fancybox-content iframe {
+    width: 125% !important;
+    height: 125% !important;
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
   }
 }
 @media (min-width: 1025px) {
@@ -426,6 +448,13 @@ nav ul li a:hover {
 
   .contact-text h1, .contact-text p {
     text-align: left;
+  }
+
+  .fancybox-slide--iframe .fancybox-content iframe {
+    width: 100% !important;
+    height: 100% !important;
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
 @media (min-width: 1281px) {
