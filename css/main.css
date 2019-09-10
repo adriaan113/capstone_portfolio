@@ -112,9 +112,6 @@ header nav ul li:first-child {
 
 .underline {
   position: relative;
-}
-
-.underline1 .underline2 {
   display: inline-block;
 }
 
