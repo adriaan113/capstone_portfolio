@@ -170,6 +170,7 @@ header{
 
 .underline{
   position: relative;
+  display: inline-block;
 }
 
 .underline1::after{
@@ -180,9 +181,7 @@ header{
   left: 0px;
 }
 
-.underline1 .underline2{
-  display: inline-block;
-}
+
 
 .underline2::after{
   position: absolute;

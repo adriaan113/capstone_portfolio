@@ -112,6 +112,7 @@ header nav ul li:first-child {
 
 .underline {
   position: relative;
+  display: inline-block;
 }
 
 .underline1::after {
@@ -120,10 +121,6 @@ header nav ul li:first-child {
   opacity: 0.7;
   top: 5px;
   left: 0px;
-}
-
-.underline1 .underline2 {
-  display: inline-block;
 }
 
 .underline2::after {
