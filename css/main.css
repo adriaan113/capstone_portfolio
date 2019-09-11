@@ -256,6 +256,7 @@ header nav ul li:first-child {
 .fancybox-slide {
   top: 27vh;
   padding: 0 30px;
+  height: 80%;
 }
 
 .fancybox-caption {
@@ -264,8 +265,8 @@ header nav ul li:first-child {
 
 .fancybox-caption__body {
   font-size: 1em;
-  position: relative;
-  top: -80vh;
+  position: absolute;
+  top: -100vh;
   left: 0;
   right: 0;
   bottom: 0;
@@ -401,8 +402,12 @@ nav ul li a:hover {
     margin: 0 1em;
   }
 
+  .fancybox-slide {
+    top: 20vh;
+  }
+
   .fancybox-caption__body {
-    top: -75vh;
+    top: -95vh;
     width: 100%;
     padding: 2em 2.5em;
     margin: 0 auto;
@@ -417,10 +422,6 @@ nav ul li a:hover {
 }
 @media (min-width: 801px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
-  .fancybox-caption__body {
-    top: -75vh;
-  }
-
   .fancybox-slide--iframe .fancybox-content iframe {
     width: 125% !important;
     height: 125% !important;

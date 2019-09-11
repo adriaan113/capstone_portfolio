@@ -128,6 +128,7 @@ function setWindowHeight(){
         if (windowHeight < 570) {
           fbSlide.style.transform = 'scale(.7)';
           fbSlide.style.top = '17vh';
+          fbSlide.style.overflowX = 'hidden';
           fbCaptionBody.style.fontSize = '.9em';
           //fbCaptionBody.style.top = '-74vh';
           //fbCaptionBody.style.width = '90%';
@@ -139,7 +140,7 @@ function setWindowHeight(){
         //   fbCaptionBody.style.fontSize = '1.2em';
         }else{
           fbSlide.style.transform = 'scale(1)';
-          fbSlide.style.top = '27vh';
+          fbSlide.style.top = '20vh';
           fbCaptionBody.style.fontSize = '1em';
           //fbCaptionBody.style.top = '-84vh';
           //fbCaptionBody.style.width = '80%';
