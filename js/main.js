@@ -119,17 +119,31 @@ logo.addEventListener('click',()=>{
 
 
 
-// //TEST TO RESIZE CAPTION IN FANCYBOX TO ACCOMODATE HORIZONTAL MOBILE DEVICE VIEWPORTS
-// function setWindowHeight(){
-//         const windowHeight = window.innerHeight;
-//         const fbCaptionBody= document.querySelector('.fancybox-caption__body');
-//         if (windowHeight < 475) {
-//           //fbCaptionBody.style.top = '-74vh';
-//           fbCaptionBody.style.width = '90%';
-//         } else{
-//           //fbCaptionBody.style.top = '-84vh';
-//           fbCaptionBody.style.width = '80%';
-//         }
-//     }
-//
-//     window.addEventListener("resize",setWindowHeight,false);
+//TEST TO RESIZE CAPTION IN FANCYBOX TO ACCOMODATE HORIZONTAL MOBILE DEVICE VIEWPORTS
+function setWindowHeight(){
+        const windowHeight = window.innerHeight;
+        const windowWidth =  window.innerWidth;
+        const fbCaptionBody= document.querySelector('.fancybox-caption__body');
+        const fbSlide= document.querySelector('.fancybox-slide');
+        if (windowHeight < 570) {
+          fbSlide.style.transform = 'scale(.7)';
+          fbSlide.style.top = '17vh';
+          fbCaptionBody.style.fontSize = '.9em';
+          //fbCaptionBody.style.top = '-74vh';
+          //fbCaptionBody.style.width = '90%';
+        // }else if(windowWidth < 600 && windowHeight < 410){
+        //   fbSlide.style.transform = 'scale(1)';
+        //   fbCaptionBody.style.fontSize = '1.2em';
+        // }else if(windowWidth < 801 && windowHeight < 410){
+        //   fbSlide.style.transform = 'scale(1)';
+        //   fbCaptionBody.style.fontSize = '1.2em';
+        }else{
+          fbSlide.style.transform = 'scale(1)';
+          fbSlide.style.top = '27vh';
+          fbCaptionBody.style.fontSize = '1em';
+          //fbCaptionBody.style.top = '-84vh';
+          //fbCaptionBody.style.width = '80%';
+        }
+    }
+
+    window.addEventListener("resize",setWindowHeight,false);
