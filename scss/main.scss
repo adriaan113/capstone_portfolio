@@ -559,7 +559,8 @@ nav ul li a:hover{
 
   .fancybox-caption__body{
     font-size: 1.2em;
-    top: -86vh;
+    top: -75vh;
+    width: 100%;
     padding: 2em 2.5em;
     margin: 0 auto;
   }
@@ -580,7 +581,7 @@ nav ul li a:hover{
 @media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
 
 .fancybox-caption__body{
-  top: -82vh;
+  top: -75vh;
 }
 
 .fancybox-slide--iframe .fancybox-content {
@@ -637,4 +638,3 @@ nav ul li a:hover{
 
 
 }
-@media (min-width:1281px) { /* hi-res laptops and desktops */ }
