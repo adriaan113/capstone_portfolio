@@ -259,8 +259,8 @@ header nav ul li:first-child {
 
 .fancybox-caption__body {
   font-size: 1em;
-  position: absolute;
-  top: -84vh;
+  position: relative;
+  top: -74vh;
   left: 0;
   right: 0;
   bottom: 0;
