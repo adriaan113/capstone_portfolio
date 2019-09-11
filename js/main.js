@@ -112,3 +112,25 @@ logo.addEventListener('click',()=>{
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 });
+
+
+
+
+
+
+
+
+    function setWindowHeight(){
+            const windowHeight = window.innerHeight;
+            const fbCaptionBody= document.querySelector('.fancybox-caption__body');
+            if (windowHeight < 475) {
+              //console.log('satan');
+              fbCaptionBody.style.top = '-74vh';
+              fbCaptionBody.style.width = '90%';
+            } else{
+              fbCaptionBody.style.top = '-84vh';
+              fbCaptionBody.style.width = '80%';
+            }
+        }
+
+        window.addEventListener("resize",setWindowHeight,false);
