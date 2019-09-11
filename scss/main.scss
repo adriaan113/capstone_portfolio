@@ -418,13 +418,18 @@ header{
     }
 }
 
+.fancybox-link{
+  margin: 20px auto;
+  a{
+    font-size: 1.2em;
+    background-color: $primaryColor;
+    width: 100px;
+    height: auto;
+    padding: 10px;
+  }
+}
 
 
-// .fancybox-button--close{
-//   svg{
-//
-//   }
-// }
 
 
 
@@ -434,6 +439,9 @@ header{
 //***************************************************//
 //***************************************************//
 
+.fancybox-link a:active{
+  background-color: darken($primaryColor, 20%);
+}
 
 input:focus,
 textarea:focus{

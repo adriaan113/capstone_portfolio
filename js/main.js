@@ -115,35 +115,60 @@ logo.addEventListener('click',()=>{
 
 
 
-
+const btn = document.createElement("DIV");
+btn.className = 'fancybox-link';
+btn.style.display = 'none';
 
 
 
 //TEST TO RESIZE CAPTION IN FANCYBOX TO ACCOMODATE HORIZONTAL MOBILE DEVICE VIEWPORTS
 function setWindowHeight(){
         const windowHeight = window.innerHeight;
-        const windowWidth =  window.innerWidth;
         const fbCaptionBody= document.querySelector('.fancybox-caption__body');
         const fbSlide= document.querySelector('.fancybox-slide');
-        if (windowHeight < 570) {
+        const fbContainer= document.querySelector('.fancybox-container');
+
+        const link= document.querySelector('.lb-btn');
+        const getLink= link.getAttribute("href");
+
+
+
+
+        if (windowHeight < 300 && fbContainer) {
+          fbSlide.style.display = 'none';
+
+
+          btn.innerHTML = `<a href='${getLink}' target="_blank">open</a>`;
+          btn.style.display = 'block';
+
+          fbCaptionBody.appendChild(btn);
+          if(fbCaptionBody.childNodes.length >2){
+            fbCaptionBody.removeChild(fbCaptionBody.lastChild);
+          }
+
+
+
+        }else if(windowHeight < 570 && fbContainer){
+          fbSlide.style.display = 'block';
+
+          btn.style.display = 'none';
+
+
           fbSlide.style.transform = 'scale(.7)';
           fbSlide.style.top = '17vh';
           fbSlide.style.overflowX = 'hidden';
           fbCaptionBody.style.fontSize = '.9em';
-          //fbCaptionBody.style.top = '-74vh';
-          //fbCaptionBody.style.width = '90%';
-        // }else if(windowWidth < 600 && windowHeight < 410){
-        //   fbSlide.style.transform = 'scale(1)';
-        //   fbCaptionBody.style.fontSize = '1.2em';
-        // }else if(windowWidth < 801 && windowHeight < 410){
-        //   fbSlide.style.transform = 'scale(1)';
-        //   fbCaptionBody.style.fontSize = '1.2em';
-        }else{
+
+
+        }else if(fbContainer){
+          fbSlide.style.display = 'block';
+
+          btn.style.display = 'none';
+
           fbSlide.style.transform = 'scale(1)';
           fbSlide.style.top = '20vh';
           fbCaptionBody.style.fontSize = '1em';
-          //fbCaptionBody.style.top = '-84vh';
-          //fbCaptionBody.style.width = '80%';
+
         }
     }
 

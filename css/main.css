@@ -296,6 +296,21 @@ header nav ul li:first-child {
   transform-origin: 0 0;
 }
 
+.fancybox-link {
+  margin: 20px auto;
+}
+.fancybox-link a {
+  font-size: 1.2em;
+  background-color: #5736E6;
+  width: 100px;
+  height: auto;
+  padding: 10px;
+}
+
+.fancybox-link a:active {
+  background-color: #2f14a2;
+}
+
 input:focus,
 textarea:focus {
   outline: none;
