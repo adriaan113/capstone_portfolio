@@ -4,12 +4,9 @@
 //***************************************************//
 //***************************************************//
 
-
 $mainBgColor: #FF8585;
 $primaryColor: #5736E6;
 $secondaryColor: #7289AA;
-
-
 
 //***************************************************//
 //***************************************************//
@@ -19,14 +16,13 @@ $secondaryColor: #7289AA;
 
 *{
   box-sizing: border-box;
-  margin-block-start: 0;
-  margin-block-end: 0; // what is this all of a sudden?
+  // margin-block-start: 0;
+  // margin-block-end: 0; // what is this all of a sudden?
 }
 
 html{
   scroll-behavior: smooth;
 }
-
 
 body{
   margin: 0;
@@ -38,8 +34,6 @@ h2{
   padding: 10px;
   margin-bottom: 5px;
 }
-
-
 
 //***************************************************//
 //***************************************************//
@@ -53,10 +47,7 @@ header{
   background-color: $mainBgColor;
   top:0;
   z-index: 1000;
-  //transition: height .4s; does not work
   .logo{
-    // width: 100%;
-    // height: auto;
     cursor: pointer;
     padding: .8em 0 .4em;
     svg{
@@ -75,8 +66,6 @@ header{
         a{
           color: white;
           text-decoration: none;
-          // -webkit-background-clip: text;
-          // -webkit-text-fill-color: transparent; color change slider on text only
           background-image: linear-gradient(
           to right,
           $primaryColor,
@@ -84,7 +73,7 @@ header{
           $mainBgColor 50%);
           background-size: 203% 100%;
           background-position: 100%;
-       }
+        }
       }
       li:first-child{
         border-right: 2px solid white;
@@ -102,7 +91,6 @@ header{
 }
 
 .header-shrink{
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -111,19 +99,17 @@ header{
   max-width: 984px;
   background-color: $mainBgColor;
   width: 100%;
-  //position: fixed;
   top: 0;
   z-index: 9000;
   //width: 100%;
   height: 60px;
-  //margin-top: 5px;// does this work to fix header on mobile devices???
   padding: 1em 0;
   flex-direction: row;
   justify-content: space-between;
   .logo{
     svg{
       width: 72px;
-      height: 69px;// HIER WAS IK
+      height: 69px;
       margin-left: .8em;
       padding: .7em;
     }
@@ -132,9 +118,6 @@ header{
     margin: .5em .8em 0 0;
   }
 }
-
-// animate logo to the left and nav next to it if the animation is done
-
 
 //***ANIMATE LOGO***//
 .path {
@@ -148,8 +131,6 @@ header{
      stroke-dashoffset: 0;
   }
 }
-
-
 
 //***************************************************//
 //***************************************************//
@@ -181,8 +162,6 @@ header{
   left: 0px;
 }
 
-
-
 .underline2::after{
   position: absolute;
   content: url(../img/underline2.svg);
@@ -190,8 +169,6 @@ header{
   top: 5px;
   left: 0px;
 }
-
-
 
 //***************************************************//
 //***************************************************//
@@ -209,8 +186,6 @@ header{
   border-bottom: 3px solid $mainBgColor;
   max-width: 984px;
 
-  //anchor offset to fix fixed header
-
   .grid-item{
     position: relative;
     display: flex;
@@ -226,7 +201,7 @@ header{
       }
       //*** BORDERS ***//
       svg{
-        // display: none;
+
         position: absolute;
         top: 0;
         left: 0;
@@ -235,8 +210,6 @@ header{
         opacity: .5;
 
          path {
-          // stroke-dasharray: 903;
-          // stroke-dashoffset: 903;
           animation: border .7s linear forwards;
         }
 
@@ -251,8 +224,6 @@ header{
       position: absolute;
       display: none;
       top: 55%;
-      // justify-content: center;
-      // align-items: center;
       .lb-btn{
         display: inline-block;
         background-color: $primaryColor;
@@ -267,7 +238,6 @@ header{
   }
 }
 
-
 //***************************************************//
 //***************************************************//
 //*****************      CONTACT      ***************//
@@ -275,13 +245,11 @@ header{
 //***************************************************//
 
 .contact-container{
-  //width: 100%;// is this necessary???
   position: relative;
   max-width: 430px;
   margin: 0 auto;
 
   .contact-text{
-    //border-top: 3px solid $mainBgColor;
     margin: 20px 20px 30px;
     h1, p{
       text-align: center;
@@ -314,7 +282,6 @@ header{
 }
 
 .form-btn{
-  //position: relative;
   display: block;
   width: calc(100% - 40px);
   height: 2.3em;
@@ -340,9 +307,6 @@ header{
   }
 }
 
-
-
-
 //***************************************************//
 //***************************************************//
 //*****************      FOOTER       ***************//
@@ -355,10 +319,8 @@ header{
   background-color: $mainBgColor;
   padding: 6px;
   .social-icon{
-  //  padding: 10px;
   }
 }
-
 
 //***************************************************//
 //***************************************************//
@@ -367,33 +329,31 @@ header{
 //***************************************************//
 
 .fancybox-slide{
-  top: 20vh;
-  //height: 90%;
+  top: 27vh;
+  padding: 0 30px;
+  height: 80%;
+}
+
+.fancybox-caption{
+  padding: 0;
 }
 
 .fancybox-caption__body{
   font-size: 1em;
   position: absolute;
-  top: -84vh;
+  top: -100vh;
   left:0;
-
-
   right: 0;
   bottom: 0;
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
   height: 20vh;
-
   max-width: 1024px;
-
   color: white;
-  // background-color: rgba(255,255,255,0.1);
   margin: 0 auto;
   padding: 2.2em 1em 0;
-  //max-width: 1024px;
   overflow: visible;
 }
-
 
 .fancybox-slide--iframe .fancybox-content {
     max-width  : 1024px;
@@ -401,8 +361,6 @@ header{
     height: 80%;
     margin: 0;
     top: -10%;
-    // max-width  : 90%;
-    // max-height : 90%;
     iframe{
      width: 200% !important;
      height: 200% !important;
@@ -413,14 +371,16 @@ header{
     }
 }
 
-
-// .fancybox-button--close{
-//   svg{
-//
-//   }
-// }
-
-
+.fancybox-link{
+  margin: 20px auto;
+  a{
+    font-size: 1.2em;
+    background-color: $primaryColor;
+    width: 100px;
+    height: auto;
+    padding: 10px;
+  }
+}
 
 //***************************************************//
 //***************************************************//
@@ -428,6 +388,9 @@ header{
 //***************************************************//
 //***************************************************//
 
+.fancybox-link a:active{
+  background-color: darken($primaryColor, 20%);
+}
 
 input:focus,
 textarea:focus{
@@ -441,7 +404,6 @@ form button:hover{
 form button:active{
   outline: none;
 }
-
 
 .lb-btn:hover{
   //transform: skewX(10deg);
@@ -465,15 +427,13 @@ nav ul li a:hover{
   fill: $primaryColor;
 }
 
-
 //***************************************************//
 //***************************************************//
 //***************     MEDIA QUERIES     *************//
 //***************************************************//
 //***************************************************//
 
-
-@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (min-width:600px){
 
   .header-container{
     flex-direction: row;
@@ -506,7 +466,6 @@ nav ul li a:hover{
       }
     }
   }
-
 
   .intro-text{
     padding: 2em;
@@ -554,12 +513,12 @@ nav ul li a:hover{
   }
 
   .fancybox-slide{
-    //top: 15vh;
+    top: 20vh;
   }
 
   .fancybox-caption__body{
-    font-size: 1.2em;
-    top: -86vh;
+    top: -95vh;
+    width: 100%;
     padding: 2em 2.5em;
     margin: 0 auto;
   }
@@ -572,37 +531,26 @@ nav ul li a:hover{
        transform: scale(.7);
       }
   }
-
-
 }
 
+@media (min-width:801px){
 
-@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
-
-.fancybox-caption__body{
-  top: -82vh;
-}
-
-.fancybox-slide--iframe .fancybox-content {
-    iframe{
-     width: 125% !important;
-     height: 125% !important;
-     -webkit-transform: scale(.8);
-     transform: scale(.8);
-    }
-}
+  .fancybox-slide--iframe .fancybox-content {
+      iframe{
+       width: 125% !important;
+       height: 125% !important;
+       -webkit-transform: scale(.8);
+       transform: scale(.8);
+      }
+  }
 
 }
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
-
-
+@media (min-width:1025px){
 
   .header-container{
     .logo{
       padding: 1em 0;
     }
-
-    margin: 0 auto;
 
     nav{
       margin: .5em 0 0 0;
@@ -634,7 +582,4 @@ nav ul li a:hover{
          transform: scale(1);
         }
     }
-
-
 }
-@media (min-width:1281px) { /* hi-res laptops and desktops */ }

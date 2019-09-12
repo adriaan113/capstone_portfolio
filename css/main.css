@@ -1,7 +1,5 @@
 * {
   box-sizing: border-box;
-  margin-block-start: 0;
-  margin-block-end: 0;
 }
 
 html {
@@ -254,18 +252,24 @@ header nav ul li:first-child {
   padding: 6px;
 }
 .fancybox-slide {
-  top: 20vh;
+  top: 27vh;
+  padding: 0 30px;
+  height: 80%;
+}
+
+.fancybox-caption {
+  padding: 0;
 }
 
 .fancybox-caption__body {
   font-size: 1em;
   position: absolute;
-  top: -84vh;
+  top: -100vh;
   left: 0;
   right: 0;
   bottom: 0;
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
   height: 20vh;
   max-width: 1024px;
   color: white;
@@ -288,6 +292,21 @@ header nav ul li:first-child {
   transform: scale(0.5);
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
+}
+
+.fancybox-link {
+  margin: 20px auto;
+}
+.fancybox-link a {
+  font-size: 1.2em;
+  background-color: #5736E6;
+  width: 100px;
+  height: auto;
+  padding: 10px;
+}
+
+.fancybox-link a:active {
+  background-color: #2f14a2;
 }
 
 input:focus,
@@ -325,7 +344,6 @@ nav ul li a:hover {
 }
 
 @media (min-width: 600px) {
-  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
   .header-container {
     flex-direction: row;
     justify-content: space-between;
@@ -396,9 +414,13 @@ nav ul li a:hover {
     margin: 0 1em;
   }
 
+  .fancybox-slide {
+    top: 20vh;
+  }
+
   .fancybox-caption__body {
-    font-size: 1.2em;
-    top: -86vh;
+    top: -95vh;
+    width: 100%;
     padding: 2em 2.5em;
     margin: 0 auto;
   }
@@ -411,11 +433,6 @@ nav ul li a:hover {
   }
 }
 @media (min-width: 801px) {
-  /* tablet, landscape iPad, lo-res laptops ands desktops */
-  .fancybox-caption__body {
-    top: -82vh;
-  }
-
   .fancybox-slide--iframe .fancybox-content iframe {
     width: 125% !important;
     height: 125% !important;
@@ -424,10 +441,6 @@ nav ul li a:hover {
   }
 }
 @media (min-width: 1025px) {
-  /* big landscape tablets, laptops, and desktops */
-  .header-container {
-    margin: 0 auto;
-  }
   .header-container .logo {
     padding: 1em 0;
   }
@@ -456,9 +469,6 @@ nav ul li a:hover {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
-}
-@media (min-width: 1281px) {
-  /* hi-res laptops and desktops */
 }
 
 /*# sourceMappingURL=main.css.map */
