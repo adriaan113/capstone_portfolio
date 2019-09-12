@@ -1,7 +1,5 @@
 * {
   box-sizing: border-box;
-  margin-block-start: 0;
-  margin-block-end: 0;
 }
 
 html {
@@ -346,7 +344,6 @@ nav ul li a:hover {
 }
 
 @media (min-width: 600px) {
-  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
   .header-container {
     flex-direction: row;
     justify-content: space-between;
@@ -436,7 +433,6 @@ nav ul li a:hover {
   }
 }
 @media (min-width: 801px) {
-  /* tablet, landscape iPad, lo-res laptops ands desktops */
   .fancybox-slide--iframe .fancybox-content iframe {
     width: 125% !important;
     height: 125% !important;
@@ -445,10 +441,6 @@ nav ul li a:hover {
   }
 }
 @media (min-width: 1025px) {
-  /* big landscape tablets, laptops, and desktops */
-  .header-container {
-    margin: 0 auto;
-  }
   .header-container .logo {
     padding: 1em 0;
   }
