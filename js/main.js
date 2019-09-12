@@ -83,7 +83,7 @@ $('.btn-message').delay(8000).fadeOut(400);
 //STICKY HEADER
 
 $(window).scroll(function() {
-if ($(this).scrollTop() > 174.84){
+if ($(this).scrollTop() > 132.83){
     $('.header-container').addClass("header-shrink");
     $('header').css({'position' : 'fixed', 'height' : '60px'});
     //$('.portfolio-container').css('paddingTop', '60px');
@@ -115,6 +115,11 @@ logo.addEventListener('click',()=>{
 
 
 
+
+
+
+
+
 const btn = document.createElement("DIV");
 btn.className = 'fancybox-link';
 btn.style.display = 'none';
@@ -128,23 +133,21 @@ function setWindowHeight(){
         const fbSlide= document.querySelector('.fancybox-slide');
         const fbContainer= document.querySelector('.fancybox-container');
 
-        const link= document.querySelector('.lb-btn');
-        const getLink= link.getAttribute("href");
-
-
+        // const link= document.querySelector('.lb-btn');
+        // const getLink= link.getAttribute("href");
 
 
         if (windowHeight < 300 && fbContainer) {
           fbSlide.style.display = 'none';
 
 
-          btn.innerHTML = `<a href='${getLink}' target="_blank">open</a>`;
-          btn.style.display = 'block';
-
-          fbCaptionBody.appendChild(btn);
-          if(fbCaptionBody.childNodes.length >2){
-            fbCaptionBody.removeChild(fbCaptionBody.lastChild);
-          }
+          // btn.innerHTML = `<a href='${getLink}' target="_blank">open</a>`;
+          // btn.style.display = 'block';
+          //
+          // fbCaptionBody.appendChild(btn);
+          // if(fbCaptionBody.childNodes.length >2){
+          //   fbCaptionBody.removeChild(fbCaptionBody.lastChild);
+          // }
 
 
 
@@ -172,4 +175,18 @@ function setWindowHeight(){
         }
     }
 
-    window.addEventListener("resize",setWindowHeight,false);
+window.addEventListener("resize",setWindowHeight,false);
+// window.addEventListener("load",setWindowHeight,false);
+
+
+
+//ALTERNATIVE: IF WINDOW.INNERHEIGHT < 300 YOU DONT GET A MODAL
+
+  //const smallHeightLink= btnContainer.children[0];
+
+  // smallHeightLink.addEventListener('click',()=>{
+  //   if(window.innerHeight < 300){
+  //     window.open(smallHeightLink.getAttribute("href"), '_blank' );
+  //     //don't open modal
+  //   }
+  // })
