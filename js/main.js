@@ -1,6 +1,5 @@
 
 //BORDER ANIMATED SVG EFFECT
-const thumbnail=document.querySelectorAll('.thumbnail');
 const border= document.querySelectorAll('.thumbnail svg');
 const borderPath = document.querySelectorAll('.thumbnail svg path');
 const btnContainer= document.querySelectorAll('.btn-container');
@@ -20,32 +19,22 @@ for(let i=0;i<gridItem.length;i++){
       btnContainer[i].style.display='block';
   });
 
-
   gridItem[i].addEventListener('mouseout',()=>{
      border[i].style.display='none';
      btnContainer[i].style.display= 'none';
-
-      //borderPath.style.animationDirection='reverse';
   });
 }
-
-
-
-
-
-
 
 //FORM SEND BUTTON 'FUNCTIONALITY'
 const sendBtn= document.querySelector('.form-btn');
 const contactContainer= document.querySelector('.contact-container');
 const btnFormContainer= document.querySelector('.btn-form-container');
 
-
 sendBtn.addEventListener('click',()=>{
 
   const btnMessage= document.createElement('DIV');
-  btnMessage.className= 'btn-message';
-  btnMessage.innerHTML=
+        btnMessage.className= 'btn-message';
+        btnMessage.innerHTML=
 
   `<?xml version="1.0" encoding="UTF-8"?>
   <svg class ="text-bubble" width="535px" height="243px" viewBox="0 0 535 243" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -63,41 +52,28 @@ sendBtn.addEventListener('click',()=>{
               </text>
           </g>
       </g>
-  </svg>`
+  </svg>`;
 
   btnFormContainer.appendChild(btnMessage);
   btnFormContainer.insertBefore(btnMessage, btnFormContainer.childNodes[0]);
 
-
-//jquery fade effect
-
-  // $(".btn-message").click(function(){
-  //   $(".btn-message").fadeOut();
-  // });
-
-$('.btn-message').delay(8000).fadeOut(400);
-
+  $('.btn-message').delay(5000).fadeOut(400);
 });
 
-
 //STICKY HEADER
-
 $(window).scroll(function() {
-if ($(this).scrollTop() >= 174.84 ){
+if ($(this).scrollTop() > 132.83){
     $('.header-container').addClass("header-shrink");
     $('header').css({'position' : 'fixed', 'height' : '60px'});
-    //$('.portfolio-container').css('paddingTop', '60px');
   }
   else{
     $('.header-container').removeClass("header-shrink");
     $('header').css({'position' : 'static', 'height' : 'auto'});
-    //$('.portfolio-container').css('paddingTop', '0');
   }
 });
 
 //LOGO HOVER
 const path= document.querySelector('.path');
-const logoLetter= document.querySelector('.logo text');
 const logo= document.querySelector('.logo');
 
 logo.addEventListener('mouseover',()=>{
@@ -112,3 +88,49 @@ logo.addEventListener('click',()=>{
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 });
+
+//TEST TO RESIZE CAPTION IN FANCYBOX TO ACCOMODATE HORIZONTAL MOBILE DEVICE VIEWPORTS
+const btn = document.createElement("DIV");
+btn.className = 'fancybox-link';
+btn.style.display = 'none';
+
+function setWindowHeight(){
+  const windowHeight = window.innerHeight;
+  const fbCaptionBody= document.querySelector('.fancybox-caption__body');
+  const fbSlide= document.querySelector('.fancybox-slide');
+  const fbContainer= document.querySelector('.fancybox-container');
+
+    if (windowHeight < 300 && fbContainer) {
+      fbSlide.style.display = 'none';
+
+    }else if(windowHeight < 570 && fbContainer){
+      fbSlide.style.display = 'block';
+      btn.style.display = 'none';
+      fbSlide.style.transform = 'scale(.7)';
+      fbSlide.style.top = '17vh';
+      fbSlide.style.overflowX = 'hidden';
+      fbCaptionBody.style.fontSize = '.9em';
+
+    }else if(fbContainer){
+      fbSlide.style.display = 'block';
+      btn.style.display = 'none';
+      fbSlide.style.transform = 'scale(1)';
+      fbSlide.style.top = '20vh';
+      fbCaptionBody.style.fontSize = '1em';
+    }
+}
+window.addEventListener("resize",setWindowHeight,false);
+
+//ALTERNATIVE: IF WINDOW.INNERHEIGHT < 300 YOU DONT GET A MODAL
+// for(let i=0;i<6;i++){
+//
+//   const smallHeightLink= btnContainer[i].children[0];
+//
+//   smallHeightLink.addEventListener('click',()=>{
+//     if(window.innerHeight < 300){
+//       window.open(smallHeightLink.getAttribute("href"), '_blank' );
+//       //don't open modal
+//       //smallHeightLink.removeAttribute('data-fancybox');
+//     }
+//   })
+// }
