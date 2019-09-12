@@ -81,7 +81,6 @@ $('.btn-message').delay(8000).fadeOut(400);
 
 
 //STICKY HEADER
-
 $(window).scroll(function() {
 if ($(this).scrollTop() > 132.83){
     $('.header-container').addClass("header-shrink");
@@ -94,6 +93,10 @@ if ($(this).scrollTop() > 132.83){
     //$('.portfolio-container').css('paddingTop', '0');
   }
 });
+
+
+
+
 
 //LOGO HOVER
 const path= document.querySelector('.path');
@@ -149,8 +152,6 @@ function setWindowHeight(){
           //   fbCaptionBody.removeChild(fbCaptionBody.lastChild);
           // }
 
-
-
         }else if(windowHeight < 570 && fbContainer){
           fbSlide.style.display = 'block';
 
@@ -182,11 +183,14 @@ window.addEventListener("resize",setWindowHeight,false);
 
 //ALTERNATIVE: IF WINDOW.INNERHEIGHT < 300 YOU DONT GET A MODAL
 
-  //const smallHeightLink= btnContainer.children[0];
+for(let i=0;i<6;i++){
 
-  // smallHeightLink.addEventListener('click',()=>{
-  //   if(window.innerHeight < 300){
-  //     window.open(smallHeightLink.getAttribute("href"), '_blank' );
-  //     //don't open modal
-  //   }
-  // })
+  const smallHeightLink= btnContainer[i].children[0];
+
+  smallHeightLink.addEventListener('click',()=>{
+    if(window.innerHeight < 300){
+      window.open(smallHeightLink.getAttribute("href"), '_blank' );
+      //don't open modal
+    }
+  })
+}
