@@ -115,7 +115,7 @@ function setWindowHeight(){
       fbSlide.style.display = 'block';
       btn.style.display = 'none';
       fbSlide.style.transform = 'scale(1)';
-      fbSlide.style.top = '20vh';
+      fbSlide.style.top = '35vh';
       fbCaptionBody.style.fontSize = '1em';
     }
 }
