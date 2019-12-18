@@ -12,6 +12,10 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+main {
+  height: 100vh;
+}
+
 h2 {
   padding: 10px;
   margin-bottom: 5px;
@@ -252,7 +256,7 @@ header nav ul li:first-child {
   padding: 6px;
 }
 .fancybox-slide {
-  top: 35vh;
+  top: 25vh;
   padding: 0 30px;
   height: 80%;
 }
@@ -262,7 +266,7 @@ header nav ul li:first-child {
 }
 
 .fancybox-caption__body {
-  font-size: 1em;
+  font-size: 1.3em;
   position: absolute;
   top: -95vh;
   left: 0;
@@ -416,7 +420,7 @@ nav ul li a:hover {
   }
 
   .fancybox-slide {
-    top: 35vh;
+    top: 15vh;
   }
 
   .fancybox-caption__body {

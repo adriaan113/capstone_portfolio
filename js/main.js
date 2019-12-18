@@ -62,7 +62,7 @@ sendBtn.addEventListener('click',()=>{
 
 //STICKY HEADER
 $(window).scroll(function() {
-if ($(this).scrollTop() > 132.83){
+if ($(this).scrollTop() > 135){
     $('.header-container').addClass("header-shrink");
     $('header').css({'position' : 'fixed', 'height' : '60px'});
   }
